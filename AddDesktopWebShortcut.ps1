@@ -1,7 +1,7 @@
 #Variables creating local folder and download .ico file
 #$LocalIconFolderPath = "C:\ETOIcon"
-#$SourceIcon = "https://secure.etosoftware.com/images_login/Logo_ETO.svg"
-#$DestinationIcon = "C:\ETOIcon\eto.svg"
+#$SourceIcon = "https://secure.etosoftware.com/images_login/Logo_ETO.ico"
+#$DestinationIcon = "C:\ETOIcon\eto.ico"
 
 #Step 1 - Create a folder to place the URL icon
 #New-Item $LocalIconFolderPath -Type Directory
@@ -13,6 +13,6 @@
 $Shell = New-Object -ComObject WScript.Shell
 $Shortcut = $Shell.CreateShortcut("$Home\OneDrive - CARACOLE, INC\Desktop\ETO.lnk") # Change name of .lnk file
 $Shortcut.TargetPath = "https://secure.etosoftware.com/NewLogin.aspx" # Replace with the path to your file or website
-#$source.IconLocation = ”C:\ETOIcon\eto.svg”
+#$source.IconLocation = ”C:\ETOIcon\eto.ico”
 $Shortcut.Save()
 
